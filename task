@@ -1,23 +1,23 @@
 Stwórz aplikację, spełniającą wymagania:
-
+1.
     istnieje możliwość dodawania wpisów
 
     wpis posiada tytuł, opis, datę publikacji, tagi oraz autora
 
     wpis można wyświetlić, zmodyfikować oraz usunąć
-
+2.
     istnieje możliwość dodawania stron
 
     strona posiada nazwę oraz treść
 
     stronę można wyświetlić, zmodyfikować oraz usunąć
-
+3.
     wpisy oraz strony powinny posiadać dodatkową informację, ID (identyfikator - unikalna liczba)
 
     np. jeśli dodam pierwszy wpis, to powinien otrzymać id = 1, jeśli potem dodam stronę to powinna otrzymać id=2 itd. Jeden wspólny iterator dla wpisów oraz stron.
 
     wczytywanie danych będzie odbywało się poprzez konsolę
-
+4.
     istnieje możliwość dodawania autorów
 
     autor posiada imię oraz nazwisko
