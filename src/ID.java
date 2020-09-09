@@ -1,4 +1,3 @@
-public enum ID {
-    ID;
-    private static int id;
+public interface ID {
+    static int id=0;
 }
