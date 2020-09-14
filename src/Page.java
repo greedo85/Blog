@@ -1,4 +1,4 @@
-public class Page implements ID{
+public class Page {
     private String pageName;
     private String pageContent;
     static int id=0;

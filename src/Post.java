@@ -1,24 +1,31 @@
 import java.time.LocalDate;
 import java.util.Date;
 
-public class Post implements ID {
+public class Post extends Author {
     LocalDate localDate;
+    Author author;
     private String title;
     private String description;
-    static int id=0;
-    public Post( String title, String description) {
+    private static int id=0;
+    private int postNumber;
+
+    public Post(String title, String description, Author author, int postNumber) {
+        this.author = author;
+        this.postNumber=postNumber;
         this.title = title;
         this.description = description;
-        localDate=LocalDate.now();
+        localDate = LocalDate.now();
         id++;
     }
 
     @Override
     public String toString() {
-        return "Post{" +
-                "title='" + title + '\'' +
+        super.toString();
+        return "Post id:{" +postNumber+
+                " localDate=" + localDate +
+                ", author=" + author +
+                ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
-                "ID: "+id+" Date: "+localDate+
                 '}';
     }
 }
