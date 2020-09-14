@@ -6,6 +6,15 @@ public class Post extends Author {
     Author author;
     private String title;
     private String description;
+
+    public void setTitle( String title ) {
+        this.title = title;
+    }
+
+    public void setDescription( String description ) {
+        this.description = description;
+    }
+
     private static int id=0;
     private int postNumber;
 
@@ -21,11 +30,10 @@ public class Post extends Author {
     @Override
     public String toString() {
         super.toString();
-        return "Post id:{" +postNumber+
-                " localDate=" + localDate +
-                ", author=" + author +
-                ", title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                '}';
+        return "Post id: " +postNumber+
+                "\ndata: " + localDate +"\n"+
+                 author +
+                "Tytuł: " + title + "\n" +
+                "Treść: " + description+"\n" ;
     }
 }
