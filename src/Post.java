@@ -13,7 +13,6 @@ public class Post implements ID {
         id++;
     }
 
-
     @Override
     public String toString() {
         return "Post{" +
