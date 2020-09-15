@@ -1,10 +1,39 @@
+import java.util.Scanner;
 import java.util.concurrent.BlockingQueue;
 
 public class Main {
     public static void main( String[] args ) {
-        Blog blog=new Blog(2);
-        blog.addPost(new Author());
-        System.out.println(blog);
+        Scanner scanner = new Scanner(System.in);
+        Blog blog = new Blog(4);
+        char choice;
+        do {
+            System.out.println("\nWybierz co zrobić:");
+            System.out.println("d - dodaj post");
+            System.out.println("w - wyświetl posty");
+            System.out.println("e - edytuj post");
+            System.out.println("q - zakończ");
+            choice = scanner.next().charAt(0);
+            switch (choice) {
+                case 'd':
+                    blog.addPost();
+                    break;
+                case 'w':
+                    try {
+                        System.out.println(blog);
+                    } catch (NullPointerException e) {
+                        System.out.println("Post jest pusty");
+                        continue;
+                    }
+                    break;
+                case 'e':
+                    System.out.println("Podaj numer posta do edycji:");
+                    blog.editPost(scanner.nextInt());
+                case 'c':
+                    continue;
 
+            }
+
+        }
+        while (choice != 'q');
     }
 }
