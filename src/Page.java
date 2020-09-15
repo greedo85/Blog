@@ -1,4 +1,4 @@
-public class Page {
+public class Page extends Author {
     private String pageName;
     private String pageContent;
     static int id=0;

@@ -6,6 +6,8 @@ public class Post extends Author {
     Author author;
     private String title;
     private String description;
+    private static int id=0;
+    private int postNumber;
 
     public void setTitle( String title ) {
         this.title = title;
@@ -15,8 +17,6 @@ public class Post extends Author {
         this.description = description;
     }
 
-    private static int id=0;
-    private int postNumber;
 
     public Post(String title, String description, Author author, int postNumber) {
         this.author = author;
