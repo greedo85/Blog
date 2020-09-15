@@ -9,6 +9,7 @@ public class Main {
         do {
             System.out.println("\nWybierz co zrobić:");
             System.out.println("d - dodaj post");
+            System.out.println("a - dodaj autorów");
             System.out.println("w - wyświetl posty");
             System.out.println("e - edytuj post");
             System.out.println("q - zakończ");
@@ -28,6 +29,16 @@ public class Main {
                 case 'e':
                     System.out.println("Podaj numer posta do edycji:");
                     blog.editPost(scanner.nextInt());
+                case 'a':
+                    try {
+                    blog.addAuthor();
+
+                    }
+                    catch (NullPointerException e)
+                    {
+                        continue;
+                    }
+                    break;
                 case 'c':
                     continue;
 
