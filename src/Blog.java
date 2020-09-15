@@ -37,20 +37,20 @@ public class Blog {
         savePostToFile(postIterator);
         postIterator++;
     }
-    public void savePostToFile(int postNumber) throws IOException {
 
-        File file=new File("posty.txt");
+    public void savePostToFile( int postNumber ) throws IOException {
 
-        FileWriter fileWriter=new FileWriter(file, true);
+        File file = new File("posty.txt");
+
+        FileWriter fileWriter = new FileWriter(file, true);
         String line = "";
 
-       /* while (true) {*/
-            line = posts[postNumber].toString();
-            line += "\n";
-            fileWriter.write(line, 0, line.length());
-        /*}*/
+        line = posts[postNumber].toString();
+        line += "\n";
+        fileWriter.write(line, 0, line.length());
         fileWriter.close();
     }
+
     public void editPost( int postNumber ) {
         System.out.println("Wpisz nowy tytuł: ");
         posts[postNumber - 1].setTitle(scanner.nextLine());
@@ -62,6 +62,10 @@ public class Blog {
     public String toString() {
         for (Post p : posts) {
             System.out.println(p.toString());
+        }
+        for (Author a:author
+             ) {
+            System.out.println(a.toString());
         }
         return "";
     }

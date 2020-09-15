@@ -32,11 +32,9 @@ public class Main {
                     blog.editPost(scanner.nextInt());
                 case 'a':
                     try {
-                    blog.addAuthor();
+                        blog.addAuthor();
 
-                    }
-                    catch (NullPointerException e)
-                    {
+                    } catch (NullPointerException e) {
                         continue;
                     }
                     break;

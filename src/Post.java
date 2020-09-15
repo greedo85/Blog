@@ -6,7 +6,7 @@ public class Post extends Author {
     Author author;
     private String title;
     private String description;
-    private static int id=0;
+    private static int id = 0;
     private int postNumber;
 
     public void setTitle( String title ) {
@@ -18,9 +18,9 @@ public class Post extends Author {
     }
 
 
-    public Post(String title, String description, Author author, int postNumber) {
+    public Post( String title, String description, Author author, int postNumber ) {
         this.author = author;
-        this.postNumber=postNumber;
+        this.postNumber = postNumber;
         this.title = title;
         this.description = description;
         localDate = LocalDate.now();
@@ -30,10 +30,10 @@ public class Post extends Author {
     @Override
     public String toString() {
         super.toString();
-        return "Post id: " +postNumber+
-                "\ndata: " + localDate +"\n"+
-                 author +
+        return "Post id: " + postNumber +
+                "\ndata: " + localDate + "\n" +
+                author +
                 "Tytuł: " + title + "\n" +
-                "Treść: " + description+"\n" ;
+                "Treść: " + description + "\n";
     }
 }
